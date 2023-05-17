@@ -4,8 +4,17 @@
     --highlight-color: #f5d832;
 }
 
+
+
 *{
     font-size: 16px;
+}
+
+select {
+    position: relative;
+    top: -100px;
+    right: -650px;
+    background-color:#ffad16;
 }
 
 html{
@@ -95,10 +104,16 @@ h3{
     
 }
 
+
 .menu .logo img{
     animation-name: opening-logo;
     animation-duration: 1.6s;
     animation-timing-function: ease-in-out;
+    
+    
+}
+.menu-right{
+    margin-left: 20px;
 }
 
 .menu-mobile{
