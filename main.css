@@ -45,14 +45,14 @@ body{
     background-color: var(--highlight-color);
 }
 
-a{
+a, svg{
   color: var(--primary-color);
   text-decoration: none;
   padding: 10px;
   transition: color 0.2s ease-in-out
 }
 
-a:hover{
+a:hover, svg:hover{
     color: var(--highlight-color);
 }
 
