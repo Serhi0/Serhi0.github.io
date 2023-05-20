@@ -217,7 +217,7 @@
         <!-- CONTACT-->
         <section class="contact" id="contact">
             
-            <section class="contact-container">
+            <section class="contact-container" id="contact-container">
                 <h2>NO ENTRE EN PÁNICO</h2>
                 
                 <section class="columns">
@@ -541,6 +541,8 @@
                 const selectElement2 = document.getElementById("theme-select1");
                 selectElement2.style.setProperty("background-color", "#ffad16");
                 selectElement2.style.setProperty("color", "Black");
+                const selectElement3 = document.getElementById("contact-container");
+                selectElement3.style.setProperty("color", "var(--background-color)");
             } else if (selectedValue === "dark") {
                 document.documentElement.style.setProperty("--background-color", "black");
                 document.documentElement.style.setProperty("--primary-color", "rgb(94, 91, 91)");
@@ -552,7 +554,10 @@
                 const selectElement2 = document.getElementById("theme-select1");
                 selectElement2.style.setProperty("background-color", "Black");
                 selectElement2.style.setProperty("color", "white");
+                const selectElement3 = document.getElementById("contact-container");
+                selectElement3.style.setProperty("color", "white");
             }
+            contact-container
         };
     </script>
     
