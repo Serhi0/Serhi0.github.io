@@ -150,6 +150,7 @@ h3{
 .menu-mobile .header .logo{
     flex-grow: 2;
     text-align: center;
+    margin-left: 5%;
 }
 
 .menu-mobile .header .logo img{
