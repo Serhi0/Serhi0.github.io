@@ -16,9 +16,8 @@
     <section class="main-container">
         <section class="menu">
             <section class ="menu-top-right">
-                <select name="theme-select" id="theme-select">
-                    <option value="" selected disabled hidden>Claro</option>
-                    <option value="light" >Claro</option>
+                <select class="select1" name="theme-select" id="theme-select">
+                    <option value="light" selected >Claro</option>
                     <option value="dark" >Oscuro</option>
                 </select>
             </section>
@@ -52,7 +51,7 @@
                 <section class="header">
                     <a href="" class="logo"><img src="./img/logo.png" width="64" alt=""></a>
                     <a href="#" id="buttonOpenCloseMenu">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
                     </a>
                 </section>
                 <section id="menu-mobile-items" class="menu-mobile-closed">
@@ -70,9 +69,8 @@
                             <a href="">CONTACTO</a>
                         </li>
                         <li>
-                            <select name="theme-select" id="theme-select">
-                                <option value="" selected disabled hidden>Tema</option>
-                                <option value="light">Claro</option>
+                            <select class="select2" name="theme-select1" id="theme-select1">
+                                <option value="light"  >Claro</option>
                                 <option value="dark">Oscuro</option>
                             </select>
                         </li>
@@ -503,27 +501,60 @@
 
     </script>-->
     <script>
-           const themeSelect = document.getElementById("theme-select");
-
-           themeSelect.addEventListener("change", function() {
-           if (themeSelect.value === "light") {
-              document.documentElement.style.setProperty("--background-color", "#ffad16");
-              document.documentElement.style.setProperty("--primary-color", "#000");
-              document.documentElement.style.setProperty("--highlight-color", "#f5d832");
-              document.documentElement.style.setProperty("color","Black");
-              const selectElement = document.getElementById("theme-select");
-             selectElement.style.setProperty("background-color", "#ffad16");
-
-           } else if (themeSelect.value === "dark") {
-              document.documentElement.style.setProperty("--background-color","black");
-              document.documentElement.style.setProperty("--primary-color","rgb(94, 91, 91)");
-              document.documentElement.style.setProperty("--highlight-color"," grey");
-              document.documentElement.style.setProperty("color","white");
-              const selectElement = document.getElementById("theme-select");
-             selectElement.style.setProperty("background-color", "Black");
-             selectElement.style.setProperty("color", "white");  
+        // Obtén referencias a los elementos select
+        const select1 = document.getElementById('theme-select');
+        const select2 = document.getElementById('theme-select1');
+    
+        // Agrega un event listener al select1
+        select1.addEventListener('change', function() {
+            // Obtén el valor seleccionado en el select1
+            const selectedValue = select1.value;
+    
+            // Actualiza el valor y selecciona la opción correspondiente en el select2
+            select2.value = selectedValue;
+    
+            // Actualiza el fondo según la opción seleccionada
+            updateBackground(selectedValue);
+        });
+    
+        // Agrega un event listener al select2
+        select2.addEventListener('change', function() {
+            // Obtén el valor seleccionado en el select2
+            const selectedValue = select2.value;
+    
+            // Actualiza el valor y selecciona la opción correspondiente en el select1
+            select1.value = selectedValue;
+    
+            // Actualiza el fondo según la opción seleccionada
+            updateBackground(selectedValue);
+        });
+    
+        const updateBackground = function(selectedValue) {
+            if (selectedValue === "light") {
+                document.documentElement.style.setProperty("--background-color", "#ffad16");
+                document.documentElement.style.setProperty("--primary-color", "#000");
+                document.documentElement.style.setProperty("--highlight-color", "#f5d832");
+                document.documentElement.style.setProperty("color", "black");
+                const selectElement1 = document.getElementById("theme-select");
+                selectElement1.style.setProperty("background-color", "#ffad16");
+                selectElement1.style.setProperty("color", "Black");
+                const selectElement2 = document.getElementById("theme-select1");
+                selectElement2.style.setProperty("background-color", "#ffad16");
+                selectElement2.style.setProperty("color", "Black");
+            } else if (selectedValue === "dark") {
+                document.documentElement.style.setProperty("--background-color", "black");
+                document.documentElement.style.setProperty("--primary-color", "rgb(94, 91, 91)");
+                document.documentElement.style.setProperty("--highlight-color", "grey");
+                document.documentElement.style.setProperty("color", "white");
+                const selectElement1 = document.getElementById("theme-select");
+                selectElement1.style.setProperty("background-color", "Black");
+                selectElement1.style.setProperty("color", "white");
+                const selectElement2 = document.getElementById("theme-select1");
+                selectElement2.style.setProperty("background-color", "Black");
+                selectElement2.style.setProperty("color", "white");
             }
-           });
+        };
     </script>
+    
 </body>
 </html>

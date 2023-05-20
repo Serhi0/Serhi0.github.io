@@ -4,18 +4,27 @@
     --highlight-color: #f5d832;
 }
 
-
+:root.oscuro{
+    --background-color:black;
+    --primary-color:rgb(94, 91, 91);
+    --highlight-color: grey; 
+}
 
 *{
     font-size: 16px;
 }
 
-select {
+.select1 {
     position: relative;
     top: -100px;
     right: -650px;
     background-color:#ffad16;
 }
+
+.select2 {
+    background-color:#ffad16;
+}
+
 
 html{
     scroll-behavior: smooth;
@@ -70,12 +79,14 @@ h3{
 */
 
 .menu{
+    
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     margin: 100px auto 0 auto;
     width: 50%;
     align-items: center;
+    padding-right: 10%;
 }
 
 .menu > section{
@@ -89,12 +100,15 @@ h3{
     display: flex;
     justify-content: center;
     gap: 30px;
+
+    
 }
 
 .menu ul li{
     animation-name: opening-logo;
     animation-duration: 1.4s;
     animation-timing-function: ease-in-out;
+    
 }
 
 .menu a{
@@ -151,6 +165,7 @@ h3{
     padding: 0;
     display: flex;
     flex-direction: column;
+    padding-right: 5%;
 }
 
 .menu-mobile ul li{
@@ -160,6 +175,10 @@ h3{
 .menu-mobile ul li a{
     display: block;
     padding: 10px 0;
+}
+
+#buttonOpenCloseMenu{
+    padding-bottom: 10%;
 }
 
 .menu-mobile-closed{
