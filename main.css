@@ -150,7 +150,7 @@ h3{
 .menu-mobile .header .logo{
     flex-grow: 2;
     text-align: center;
-    margin-left: 5%;
+    
 }
 
 .menu-mobile .header .logo img{
@@ -433,6 +433,7 @@ footer{
         overflow: hidden;
         height: 180px;
     }
+    
 }
 
 @media (max-width: 1280px){
@@ -459,6 +460,11 @@ footer{
     }
     .contact .contact-container .emails{
         text-align: center;
+    }
+    .menu-mobile .header .logo{
+        flex-grow: 2;
+        text-align: center;
+        margin-right: 6%;
     }
 }
 
@@ -519,7 +525,116 @@ footer{
         flex-direction: column;
         gap: 20px;
     }
+    .menu-mobile .header .logo{
+        flex-grow: 2;
+        text-align: center;
+        margin-left: 7%;
+    }
+    .main-video{
+        margin-top: 100px;
+        height: 150px;
+    }
 
+    .grid .item{
+        height: 200px;
+    }
+    .grid{
+        grid-template-columns: 1fr; 
+    }
+}
+@media (max-width: 800px){
+    .menu{
+        display: none;
+    }
+    .menu-mobile{
+        display: block;
+    }
+
+    .main-video .video video{
+        margin-top: 0;
+    }
+    
+    .columns{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .menu-mobile .header .logo{
+        flex-grow: 2;
+        text-align: center;
+        margin-left: 9%;
+    }
+    .main-video{
+        margin-top: 100px;
+        height: 150px;
+    }
+
+    .grid .item{
+        height: 200px;
+    }
+    .grid{
+        grid-template-columns: 1fr; 
+    }
+}
+@media (max-width: 580px){
+    .menu{
+        display: none;
+    }
+    .menu-mobile{
+        display: block;
+    }
+
+    .main-video .video video{
+        margin-top: 0;
+    }
+    
+    .columns{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .menu-mobile .header .logo{
+        flex-grow: 2;
+        text-align: center;
+        margin-left: 14%;
+    }
+    .main-video{
+        margin-top: 100px;
+        height: 150px;
+    }
+
+    .grid .item{
+        height: 200px;
+    }
+    .grid{
+        grid-template-columns: 1fr; 
+    }
+}
+@media (max-width: 400px){
+    .menu{
+        display: none;
+    }
+    .menu-mobile{
+        display: block;
+    }
+
+    .main-video .video video{
+        margin-top: 0;
+    }
+    
+    .columns{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .menu-mobile .header .logo{
+        flex-grow: 2;
+        text-align: center;
+        margin-left: 16%;
+    }
     .main-video{
         margin-top: 100px;
         height: 150px;
